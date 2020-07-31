@@ -13,7 +13,7 @@ async function sendApiRequest(){
 var input=document.getElementById('inputid');
   //add filter otptions here then append to end of query with "+"
 //looking for way to add filter through checkbox
-//right now all filters are activated
+//gives all filters an undefined value
 var stringsum=undefined;
 var final="";
 var stringsum1=undefined;
@@ -26,6 +26,8 @@ var stringsum7=undefined;
 var stringsum8=undefined;
 var stringsum9=undefined;
 var stringsum10=undefined;
+//these will change the value if the corresponding checkbox is checked
+//if not they remain undefined
 var filtert=document.getElementById('filter1')
 if (filtert.checked) {
    stringsum1 = document.getElementById('filter1');
@@ -78,12 +80,13 @@ if (filtert.checked) {
 }
 //stringsum=[stringsum1.value,stringsum2.value,stringsum3.value,stringsum4.value,stringsum5.value,stringsum6.value,stringsum7.value,stringsum8.value,stringsum9.value,stringsum10.value].join('');
 //var stringsum2='';
+//adds all vars to an array
 var data = [stringsum1, stringsum2, stringsum3, stringsum4, stringsum5, stringsum6, stringsum7, stringsum8, stringsum9, stringsum10];
-
+//this function will remove any element in the array that has an undefined value
 data = data.filter(function( element ) {
    return element !== undefined;
 });
-//this loop adds all the filters into one string ready to be inserted into the query
+//this loop adds all the filters in the array into one string ready to be inserted into the query
 for(var i=0; i<data.length;i++){
    final+=data[i].value;
 }
@@ -93,6 +96,8 @@ console.log(stringsum);
 
   let APP_ID="2afa29fc";
   let API_KEY="3063fe6d505174b0306c307e4268fe78";
+  //if the string sum has elements in it then the first block
+  //else you just search for a recipe with no filters
 if(stringsum!==undefined){
   let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=`+input.value+final);
     let data=await response.json()
