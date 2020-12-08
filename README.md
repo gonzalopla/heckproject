@@ -4,7 +4,7 @@ Contributors:
 
 # Gonzalo Plascencia gonzalo_p@csu.fullerton.edu
 # lloyd B
-# Chuckwudi Ikem
+# Chuckwudi Ikem godofcollege43@csu.fullerton.edu
 
 
 
