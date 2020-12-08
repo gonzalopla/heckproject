@@ -12,7 +12,7 @@ async function sendApiRequest(){
   //moving user input into the search query
 var input=document.getElementById('inputid');
   //add filter otptions here then append to end of query with "+"
-//looking for way to add filter through checkbox
+//looking for way to add filter through checkboxffff
 //gives all filters an undefined value
 var stringsum=undefined;
 var final="";
