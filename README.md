@@ -18,8 +18,8 @@ W3Schools was originally created in 1998 by Refsnes Data, a Norwegian software d
 
 2-https://developer.edamam.com
 About Edamam:
-The Edamam B2B API is accessed by sending HTTPS requests on specific URLs as described below. The base URL is https://api.edamam.com and you obtain the full URL by appending request’s path to the base URL, like https://api.edamam.com/search
+The Edamam B2B API is accessed by sending HTTPS requests on specific URLs as described below. The base URL is https://api.edamam.com and you obtain the full URL by appending request’s path to the base URL, like https://api.edamam.com/search for references
 
-3-https://app.netifly.com to host a website for references
+3-https://app.netifly.com to host a website
 
 4-https://freenom.com for a free .tk url heckproject.tk
